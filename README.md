@@ -1,0 +1,2 @@
+# litchpress
+My Wordpress Theme
