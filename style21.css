@@ -1,0 +1,93 @@
+/*
+Theme Name: litchpress
+Theme URI: http://mikelindner.com
+Author: Mike Lindner
+Author URI: http://mikelindner.com
+Description: My Theme
+Version: 0.03
+License: Screw You Hippy
+License URI: http://mikelindner.com
+Text Domain: litchpress
+Tags: two-columns, right-sidebar, custom-colors, portfolio, full-width-template, custom-background, custom-header, custom-menu, custom-logo, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+@font-face {
+    font-family: "Play";
+    font-style: normal;
+    src: url("https://mikelindner.com/fonts/Play-Regular.ttf") format('truetype');
+;
+}
+
+body {
+    text-align: left;
+    font-family: 'Play', Fallback, sans-serif;
+    color: greenyellow;
+    background-color: #444;
+}
+
+a {
+    text-align: left;
+    font-family: 'Play', Fallback, sans-serif;
+    color: greenyellow;
+}
+
+#ttr_sidebar {
+    border-left: 1px solid red;
+}
+
+#ttr_footer {
+    width: 100%;
+    border-top: 1px red solid;
+    text-align: center;
+    color: greenyellow;
+    font-family: 'Play', Fallback, sans-serif;
+}
+
+#ttr_header {
+    width: 100%;
+    border-top: 1px red solid;
+    text-align: right;
+    background-image: url("https://mikelindner.com/wp-content/uploads/2019/01/1354689436.jpg");
+    background-size: cover;
+    color: greenyellow;
+    font-family: 'Play', Fallback, sans-serif;
+}
+
+#ttr_header a {
+    color: greenyellow !important;
+}
+
+.page-id-contact .ttr-header {
+    background: url("http://mikelindner.com/wp-content/uploads/2018/11/4344369_orig.jpg") no-repeat scroll 0 0 transparent;
+}
+
+h1 {
+    font-family: 'Play', Fallback, sans-serif;
+}
+
+h2 {
+    font-family: 'Play', Fallback, sans-serif;
+}
+
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    color: greenyellow !important;
+}
+
+.title {
+    font-size: 11pt;
+    font-family: 'Play', Fallback, sans-serif;
+    font-weight: bold;
+}
+
+.page-template-template-page-full-width .content,
+.page-template-template-page-full-width .sidebar {
+    width: 100%;
+    float: none;
+    clear: b
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}

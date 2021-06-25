@@ -1,0 +1,4 @@
+#!/bin/bash
+rsync -ruv --delete ~/source/litchpress/* kzs9j6@dominus:/var/www/html/wp-content/themes/litchpress
+
+# hello

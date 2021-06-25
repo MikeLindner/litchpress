@@ -1,0 +1,9 @@
+header.php – contains the code for the header section of the theme.
+index.php – contains the code for the Main Area and will specify where the other files will be included. This is the main file of the theme.
+sidebar.php – contains the information about the sidebar.
+footer.php – handles the footer section.
+style.css – responsible for the styling of your new theme.
+bootstrap.css – no separate CSS code is required; highly responsive.
+bootstrap.js – provides its own js for the navigation bar, or tabs etc.
+
+header.php index.php sidebar.php footer.php style.css bootstrap.css bootstrap.js
