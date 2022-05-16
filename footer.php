@@ -10,5 +10,8 @@
     <a href="">(c) 2008-2021 Michael Lindner</a>
 </div>
 </div>
+
+<?php wp_footer(); ?>
+
 </body>
 </html>
