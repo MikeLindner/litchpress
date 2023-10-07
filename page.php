@@ -5,7 +5,7 @@
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h1><?php //the_title(); ?></h1>
-            <b><?php the_time('F jS, Y') ?></b>
+  <!--          <b>< ?php the_time('F jS, Y') ?></b> -->
             <p><?php the_content(__('(more...)')); ?></p>
         </div>
 
@@ -25,4 +25,3 @@ sm (for tablets - screens equal to or greater than 768px wide)
 md (for small laptops - screens equal to or greater than 992px wide)
 lg (for laptops and desktops - screens equal to or greater than 1200px wide)
 -->
-
