@@ -3,7 +3,7 @@
 <head>
     <title>mike's folio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/bootstrap.js'; ?>"></script>
+<!--    <script type="text/javascript" src="< ? php echo get_stylesheet_directory_uri() . '/js/bootstrap.js'; ?>"></script> -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/css/bootstrap.css'; ?>">
 
     <link rel="stylesheet" href="https://mikelindner.com/wp-content/themes/litchpress/style2023.css">
