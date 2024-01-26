@@ -1,12 +1,59 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+// Function to get the first image from post content
+function get_first_image_from_post($post_content) {
+    $pattern = '/<img.*?src=["\'](.*?)["\']/i';
+    preg_match($pattern, $post_content, $matches);
+
+    if (!empty($matches) && isset($matches[1])) {
+        return $matches[1]; // Return the URL of the first image
+    }
+
+    return false; // No image found
+}
+
+// Function to truncate content while preserving HTML tags
+function custom_truncate_content($content, $limit) {
+    $content = strip_tags($content); // Remove unwanted HTML tags
+    $content = substr($content, 0, $limit);
+    $content = rtrim($content, " \t\n\r\0\x0B.,;"); // Remove trailing characters to ensure valid HTML
+
+    // If the content was truncated, add a "Read more" link
+    if (strlen($content) < strlen(strip_tags($content))) {
+        $content .= '... <a href="' . get_permalink() . '">Read more</a>';
+    }
+
+    return apply_filters('the_content', $content);
+}
+
+?>
+<style>
+    #ttr_content a:hover{
+        color: white;
+    }
+</style>
 <div id="ttr_main" class="row">
 <div id="ttr_content" class="col-lg-12 col-sm-12 col-md-8 col-xs-12">
     <div class="row">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <h1><?php the_title(); ?></h1>
-            <b><?php the_time('F jS, Y') ?></b>
-            <p><?php the_content(__('(more...)')); ?></p>
+			<h1><a href="<?= get_permalink() ?>"><?php the_title(); ?></a></h1>
+			<b><?php the_time('F jS, Y') ?></b>
+			<br><br>
+			<?php
+			$thumbnail_url = get_first_image_from_post(get_the_content());
+			if ($thumbnail_url) :
+			?>
+				<div class="post-thumbnail">
+					<img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php the_title_attribute(); ?>">
+				</div>
+			<?php endif; ?>
+			<br>
+			<?php
+				$limited_content = custom_truncate_content(get_the_content(), 400); // Change 500 to your desired number of characters
+				echo $limited_content;
+			?>
+			<br>
         </div>
 
         <?php endwhile; else: ?>

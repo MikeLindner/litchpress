@@ -1,2 +1,1 @@
-# litchpress
-My Wordpress Theme
+# mike's wordpress theme
