@@ -1,11 +1,11 @@
 <br>
 <br>
 <br>
-<div id= "ttr_footer">
+<div id= "ttr_footer"> |
     <a href="https://photography.mikelindner.com/">Photography</a> |
     <a href="https://computing.mikelindner.com/">Computing</a> |
     <a href="https://cooking.mikelindner.com/">Cooking</a> |
-    <a href="https://mikelindner.com/index.php/contact/">Contact</a> |
+    <!-- <a href="https://mikelindner.com/index.php/contact/">Contact</a> | -->
     <br>
     <a href="">(c) 2008-2023 Michael Lindner</a>
 </div>
