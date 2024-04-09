@@ -38,7 +38,7 @@
         <a href="https://photography.mikelindner.com/">Photography</a> |
         <a href="https://computing.mikelindner.com/">Computing</a> |
         <a href="https://cooking.mikelindner.com/">Cooking</a> |
-        <a href="https://mikelindner.com/index.php/contact/">Contact</a> |
+       <!-- <a href="https://mikelindner.com/index.php/contact/">Contact</a> | -->
 
     </div>
     <div class="container">
