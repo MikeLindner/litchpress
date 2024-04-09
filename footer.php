@@ -9,7 +9,7 @@
     <br>
     <a href="">(c) 2008-2024 Michael Lindner</a>
     <br>
-    <a href="https://wordpress.org" target="_blank">Made from Wordpress with</a> <a href="https://github.com/MikeLindner/litchpress/" target="_blank">my theme</a> 
+    <a href="https://wordpress.org" target="_blank">Made from Wordpress </a> <a href="https://github.com/MikeLindner/litchpress/" target="_blank">with my theme</a> 
 </div>
 </div>
 
