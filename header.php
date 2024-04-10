@@ -34,7 +34,8 @@
 
     <div id="ttr_header" class="jumbotron">
         <h1><a href="https://mikelindner.com/index.php/">mikelindner.com</a></h1>
-        <i> <a href="https://mikelindner.com/index.php/">powering the Internet since 1995 </i></a> <br><br> |
+        <i> <a href="https://mikelindner.com/index.php/">powering the Internet since 1995</a></i>
+        <br><br> |
         <a href="https://photography.mikelindner.com/">Photography</a> |
         <a href="https://computing.mikelindner.com/">Computing</a> |
         <a href="https://cooking.mikelindner.com/">Cooking</a> |
