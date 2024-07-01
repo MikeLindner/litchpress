@@ -51,6 +51,9 @@ function custom_truncate_content($content, $limit) {
 			<br>
 			<?php
 				$limited_content = custom_truncate_content(get_the_content(), 700); // Change 500 to your desired number of characters
+
+//				$limited_content = get_the_content();
+
 				echo $limited_content;
 			?>
 			<br>
