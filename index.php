@@ -50,7 +50,7 @@ function custom_truncate_content($content, $limit) {
 			<?php endif; ?>
 			<br>
 			<?php
-				$limited_content = custom_truncate_content(get_the_content(), 700); // Change 500 to your desired number of characters
+				$limited_content = custom_truncate_content(get_the_content(), 7000);
 
 //				$limited_content = get_the_content();
 

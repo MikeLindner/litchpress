@@ -11,10 +11,12 @@ Text Domain: litchpress
 Tags: two-columns, right-sidebar, custom-colors, portfolio, full-width-template, custom-background, custom-header, custom-menu, custom-logo, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
 @font-face {
     font-family: "Play";
     font-style: normal;
-    src: url("/Play-Regular.ttf") format('truetype');
+/*    src: url("/Play-Regular.ttf") format('truetype');*/
 ;
 }
 
@@ -47,7 +49,7 @@ a {
     width: 100%;
     border-top: 1px red solid;
     text-align: right;
-    background-image: url("https://mikelindner.com.au/wp-content/uploads/2019/01/1354689436.jpg");
+    background-image: url("https://mikelindner.com.au/wp-content/uploads/2024/10/1354689436.jpg");
     background-size: cover;
     color: greenyellow;
     font-family: 'Play', Fallback, sans-serif;
@@ -58,7 +60,7 @@ a {
 }
 
 .page-id-contact .ttr-header {
-    background: url("http://mikelindner.com.au/wp-content/uploads/2018/11/4344369_orig.jpg") no-repeat scroll 0 0 transparent;
+    background: url("https://mikelindner.com.au/wp-content/uploads/2024/10/1354689436.jpg") no-repeat scroll 0 0 transparent;
 }
 
 h1 {
