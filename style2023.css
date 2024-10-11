@@ -1,12 +1,12 @@
 /*
 Theme Name: litchpress
-Theme URI: http://mikelindner.com
+Theme URI: http://mikelindner.com.au
 Author: Mike Lindner
-Author URI: http://mikelindner.com
+Author URI: http://mikelindner.com.au
 Description: My Theme
 Version: 0.03
 License: Screw You Hippy
-License URI: http://mikelindner.com
+License URI: http://mikelindner.com.au
 Text Domain: litchpress
 Tags: two-columns, right-sidebar, custom-colors, portfolio, full-width-template, custom-background, custom-header, custom-menu, custom-logo, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 */
@@ -47,7 +47,7 @@ a {
     width: 100%;
     border-top: 1px red solid;
     text-align: right;
-    background-image: url("https://mikelindner.com/wp-content/uploads/2019/01/1354689436.jpg");
+    background-image: url("https://mikelindner.com.au/wp-content/uploads/2019/01/1354689436.jpg");
     background-size: cover;
     color: greenyellow;
     font-family: 'Play', Fallback, sans-serif;
@@ -58,7 +58,7 @@ a {
 }
 
 .page-id-contact .ttr-header {
-    background: url("http://mikelindner.com/wp-content/uploads/2018/11/4344369_orig.jpg") no-repeat scroll 0 0 transparent;
+    background: url("http://mikelindner.com.au/wp-content/uploads/2018/11/4344369_orig.jpg") no-repeat scroll 0 0 transparent;
 }
 
 h1 {
