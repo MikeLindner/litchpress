@@ -7,7 +7,7 @@
     <a href="https://cooking.mikelindner.com.au/">Cooking</a> |
     <a href="https://mikelindner.com.au/index.php/contact/">Contact</a> | -->
     <br>
-    <a href="">(c) 2008-2024 Michael Lindner</a>
+    <a href="">(c) 2008-2025 Michael Lindner</a>
     <br>
     <a href="https://wordpress.org" target="_blank">Made from Wordpress </a> <a href="https://github.com/MikeLindner/litchpress/" target="_blank">with my theme</a> 
 </div>
