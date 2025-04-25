@@ -14,7 +14,7 @@ function get_first_image_from_post($post_content) {
 
 // Function to truncate content while preserving HTML tags
 function custom_truncate_content($content, $limit) {
-    // $content = strip_tags($content); // Remove unwanted HTML tags
+    $content = strip_tags($content); // Remove unwanted HTML tags
     $content = substr($content, 0, $limit);
     $content = rtrim($content, " \t\n\r\0\x0B.,;"); // Remove trailing characters to ensure valid HTML
 
@@ -50,9 +50,9 @@ function custom_truncate_content($content, $limit) {
 			<?php endif; ?>
 			<br>
 			<?php
-				$limited_content = custom_truncate_content(get_the_content(), 7000);
+//				$limited_content = custom_truncate_content(get_the_content(), 7000);
 
-//				$limited_content = get_the_content();
+				$limited_content = get_the_content();
 
 				echo $limited_content;
 			?>
