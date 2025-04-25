@@ -64,7 +64,7 @@ function custom_truncate_content($content, $limit) {
         <?php endif; ?>
     </div>
 </div>
-<?php //get_sidebar(); ?>
+<?php get_sidebar(); ?>
 </div>
 
 <?php get_footer(); ?>
