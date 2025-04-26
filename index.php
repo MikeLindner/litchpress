@@ -18,13 +18,13 @@ function get_first_image_from_post($post_content) {
 
 
 
-add_filter( 'wp_kses_allowed_html', 'gutenberg_kses_allowed_html' );
+// add_filter( 'wp_kses_allowed_html', 'gutenberg_kses_allowed_html' );
 
 
 
 // Function to truncate content while preserving HTML tags
 function custom_truncate_content($content, $limit) {
-//    $content = strip_tags($content); // Remove unwanted HTML tags
+    $content = strip_tags($content, '<a>'); // Remove unwanted HTML tags
 
 //   $allowed_tags = array('a', 'img', 'br', 'p', 'strong', 'em'); // add more tags as needed
 //   $content = wp_kses($content, $allowed_tags);
