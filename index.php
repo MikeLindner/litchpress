@@ -18,10 +18,10 @@ function custom_truncate_content($content, $limit) {
     $content = substr($content, 0, $limit);
   $content = rtrim($content, " \t\n\r\0\x0B.,;"); // Remove trailing characters to ensure valid HTML
 
-    If the content was truncated, add a "Read more" link
-     if (strlen($content) > strlen(strip_tags($content))) {
-         $content .= '... <a href="' . get_permalink() . '">Read more</a>';
-     }
+    // If the content was truncated, add a "Read more" link
+    // if (strlen($content) > strlen(strip_tags($content))) {
+    //     $content .= '... <a href="' . get_permalink() . '">Read more</a>';
+    // }
 
     return apply_filters('the_content', $content);
 }
