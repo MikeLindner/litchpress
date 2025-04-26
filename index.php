@@ -21,9 +21,9 @@ function custom_truncate_content($content, $limit) {
     $content = substr($content, 0, $limit);
     $content = rtrim($content, " \t\n\r\0\x0B.,;"); // Remove trailing characters to ensure valid HTML
 
- If the content was truncated, add a "Read more" link
+//  If the content was truncated, add a "Read more" link
     if (strlen($content) > POST_SIZE)) {
-        $content .= '... <a href="' . get_permalink() . '">Read more</a>';
+        $content .= '... <a href="' . get_permalink() . '"><br>Read more...</a>';
     }
 
  //   $content .= '... <a href="' . get_permalink() . '"><br>Read more...</a>';
