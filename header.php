@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://mikelindner.com.au/wp-content/themes/litchpress/style.css">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<!--    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
@@ -25,7 +25,7 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-
+-->
     <meta property="og:title" content="hacker, snapper, cuisinier" />
     <meta property="og:image" content="https://mikelindner.com.au/wp-content/uploads/2019/07/cloud.png" />
 
