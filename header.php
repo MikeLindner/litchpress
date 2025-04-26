@@ -25,7 +25,7 @@
     <div id="ttr_header" class="jumbotron">
         <h1><a href="https://mikelindner.com.au/index.php/">mikelindner.com.au</a></h1>
         <i> <a href="https://mikelindner.com.au/index.php/">powering the Internet since 1995</a></i>
-        <br>
+        <br><br>
         | <a href="https://mikelindner.com.au/">Photography</a> |
         <a href="https://mikelindner.com.au/">Computing</a> |
         <a href="https://mikelindner.com.au/">Cooking</a> |
