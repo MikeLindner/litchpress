@@ -4,12 +4,12 @@
 <head>
     <title>mike's folio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!--    <script type="text/javascript" src="< ? php echo get_stylesheet_directory_uri() . '/js/bootstrap.js'; ?>"></script> -->
+    <!--    <script type="text/javascript" src="< ? php echo get_stylesheet_directory_uri() . '/js/bootstrap.js'; ?>"></script> -->
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/css/bootstrap.css'; ?>">
 
     <link rel="stylesheet" href="https://mikelindner.com.au/wp-content/themes/litchpress/style.css">
 
-<!--    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <!--    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
@@ -26,8 +26,11 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 -->
+
+    <link rel="apple-touch-icon" href="http://mikelindner.com.au/wp-content/uploads/2025/04/me_pop-art-25.png">
+    <link rel="icon" type="image/png" href="http://mikelindner.com.au/wp-content/uploads/2025/04/me_pop-art-25.png">
     <meta property="og:title" content="hacker, snapper, cuisinier" />
-    <meta property="og:image" content="https://mikelindner.com.au/wp-content/uploads/2019/07/cloud.png" />
+    <meta property="og:image" content="http://mikelindner.com.au/wp-content/uploads/2025/04/me_pop-art-25.jpeg" />
 
 </head>
 
