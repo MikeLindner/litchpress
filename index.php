@@ -16,7 +16,7 @@ function get_first_image_from_post($post_content) {
 function custom_truncate_content($content, $limit) {
     $content = strip_tags($content); // Remove unwanted HTML tags
     $content = substr($content, 0, $limit);
-//    $content = rtrim($content, " \t\n\r\0\x0B.,;"); // Remove trailing characters to ensure valid HTML
+    $content = rtrim($content, " \t\n\r\0\x0B.,;"); // Remove trailing characters to ensure valid HTML
 
     // If the content was truncated, add a "Read more" link
     // if (strlen($content) > strlen(strip_tags($content))) {
