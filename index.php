@@ -22,7 +22,7 @@ function custom_truncate_content($content, $limit) {
 //    if (strlen($content) < strlen(strip_tags($content))) {
 //        $content .= '... <a href="' . get_permalink() . '">Read more</a>';
 //    }
-    $content .= '... <a href="' . get_permalink() . '">Read more</a>';
+    $content .= '... <a href="' . get_permalink() . '"><br>Read more</a>';
     return apply_filters('the_content', $content);
 }
 
