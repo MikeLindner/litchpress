@@ -1,5 +1,8 @@
 <?php get_header(); 
 
+const POST_SIZE = 700;
+
+
 // Function to get the first image from post content
 function get_first_image_from_post($post_content) {
     $pattern = '/<img.*?src=["\'](.*?)["\']/i';
@@ -18,12 +21,12 @@ function custom_truncate_content($content, $limit) {
     $content = substr($content, 0, $limit);
     $content = rtrim($content, " \t\n\r\0\x0B.,;"); // Remove trailing characters to ensure valid HTML
 
-// If the content was truncated, add a "Read more" link
-//    if (strlen($content) < strlen(strip_tags($content))) {
-//        $content .= '... <a href="' . get_permalink() . '">Read more</a>';
-//    }
+ If the content was truncated, add a "Read more" link
+    if (strlen($content) > POST_SIZE)) {
+        $content .= '... <a href="' . get_permalink() . '">Read more</a>';
+    }
 
-    $content .= '... <a href="' . get_permalink() . '"><br>Read more...</a>';
+ //   $content .= '... <a href="' . get_permalink() . '"><br>Read more...</a>';
 
     return apply_filters('the_content', $content);
 }
@@ -52,7 +55,7 @@ function custom_truncate_content($content, $limit) {
 			<?php endif; ?>
 			<br>
 			<?php
-				$limited_content = custom_truncate_content(get_the_content(), 700); // Change 500 to your desired number of characters
+				$limited_content = custom_truncate_content(get_the_content(), POST_SIZE); // Change 500 to your desired number of characters
 				echo $limited_content;
 			?>
 			<br>
