@@ -27,9 +27,9 @@
         <i> <a href="https://mikelindner.com.au/index.php/">powering the Internet since 1995</a></i>
         <br><br>
 
-        | <a href="https://mikes.au/">Photography</a> |
-        <a href="https://belairmoon.au/">Belair Moonshine</a> |
-        <a href="https://www.linkedin.com/in/michaellindner/">LinkedIn</a> |
+        | <a href="https://mikes.au/" target="_blank">Photography</a> |
+        <a href="https://belairmoon.au/" target="_blank">Belair Moonshine</a> |
+        <a href="https://www.linkedin.com/in/michaellindner/" target="_blank">LinkedIn</a> |
 
     </div>
     <div class="container">
