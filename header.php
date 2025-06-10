@@ -26,11 +26,12 @@
         <h1><a href="https://mikelindner.com.au/index.php/">mikelindner.com.au</a></h1>
         <i> <a href="https://mikelindner.com.au/index.php/">powering the Internet since 1995</a></i>
         <br><br>
-<!--
-        | <a href="https://mikelindner.com.au/">Photography</a> |
-        <a href="https://mikelindner.com.au/">Computing</a> |
-        <a href="https://mikelindner.com.au/">Cooking</a> |
-        <a href="https://mikelindner.com.au/index.php/">Contact</a> |
--->
+
+        | <a href="https://mikes.au/">Photography</a> |
+        <a href="https://belairmoon.au/">Belair Moonshine</a> |
+        <a href="https://www.linkedin.com/in/michaellindner/">LinkedIn</a> |
+
     </div>
     <div class="container">
+
+
