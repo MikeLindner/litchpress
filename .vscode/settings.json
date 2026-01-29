@@ -1,0 +1,9 @@
+{
+    "php.executablePath": "/usr/bin/php",
+    "php.validate.executablePath": "/usr/bin/php",
+    "intelephense.environment.includePaths": [
+        "vendor/php-stubs/wordpress-stubs"
+    ],
+    "intelephense.files.maxSize": 1000000,
+    "intelephense.environment.phpVersion": "8.5.2"
+}
