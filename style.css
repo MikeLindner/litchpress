@@ -11,25 +11,41 @@ Text Domain: litchpress
 Tags: two-columns, right-sidebar, custom-colors, portfolio, full-width-template, custom-background, custom-header, custom-menu, custom-logo, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
 */
 
+/* Google Fonts - primary source */
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
+/* Local fallback - Play Regular */
 @font-face {
     font-family: "Play";
     font-style: normal;
-/*    src: url("/Play-Regular.ttf") format('truetype');*/
-;
+    font-weight: 400;
+    src: local('Play Regular'), local('Play-Regular'),
+         url('fonts/play-v9-latin-regular.woff2') format('woff2'),
+         url('fonts/play-v9-latin-regular.woff') format('woff'),
+         url('fonts/Play-Regular.ttf') format('truetype');
+}
+
+/* Local fallback - Play Bold */
+@font-face {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 700;
+    src: local('Play Bold'), local('Play-Bold'),
+         url('fonts/play-v9-latin-700.woff2') format('woff2'),
+         url('fonts/play-v9-latin-700.woff') format('woff'),
+         url('fonts/Play-Bold.ttf') format('truetype');
 }
 
 body {
     text-align: left;
-    font-family: 'Play', Fallback, sans-serif;
+    font-family: 'Play', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     color: greenyellow;
     background-color: #444;
 }
 
 a {
     text-align: left;
-    font-family: 'Play', Fallback, sans-serif;
+    font-family: 'Play', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     color: greenyellow;
 }
 
@@ -42,7 +58,7 @@ a {
     border-top: 1px red solid;
     text-align: center;
     color: greenyellow;
-    font-family: 'Play', Fallback, sans-serif;
+    font-family: 'Play', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 #ttr_header {
@@ -52,7 +68,7 @@ a {
     background-image: url("https://mikelindner.com.au/wp-content/uploads/2025/04/1354689436.jpg");
     background-size: cover;
     color: greenyellow;
-    font-family: 'Play', Fallback, sans-serif;
+    font-family: 'Play', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 #ttr_header a {
@@ -64,11 +80,11 @@ a {
 }
 
 h1 {
-    font-family: 'Play', Fallback, sans-serif;
+    font-family: 'Play', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 h2 {
-    font-family: 'Play', Fallback, sans-serif;
+    font-family: 'Play', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 pre {
@@ -78,7 +94,7 @@ pre {
 
 .title {
     font-size: 11pt;
-    font-family: 'Play', Fallback, sans-serif;
+    font-family: 'Play', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     font-weight: bold;
 }
 
@@ -86,10 +102,40 @@ pre {
 .page-template-template-page-full-width .sidebar {
     width: 100%;
     float: none;
-    clear: b
+    clear: both;
 }
 
 img {
     height: auto;
     max-width: 100%;
+}
+
+/* Homepage Blog Post Thumbnails */
+.post-thumbnail {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.post-thumbnail img {
+    max-height: 250px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Navigation Menu Styles */
+.main-navigation {
+    display: inline;
+}
+
+.main-navigation a {
+    color: greenyellow;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.main-navigation a:hover {
+    color: white;
+    text-decoration: underline;
 }
