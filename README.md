@@ -1,4 +1,4 @@
-# litchpress — WordPress Theme
+# 🎨 litchpress — WordPress Theme
 
 A custom, minimalist WordPress theme by **Mike Lindner** for [mikelindner.com.au](https://mikelindner.com.au).
 
@@ -13,9 +13,39 @@ A custom, minimalist WordPress theme by **Mike Lindner** for [mikelindner.com.au
 
 ---
 
-## Part 1 — Technical Documentation
+## 📑 Table of Contents
 
-### 1.1 Directory Structure
+### Part 1 — Technical Documentation
+- [1.1 📁 Directory Structure](#-11-directory-structure)
+- [1.2 📄 Core Template Files](#-12-core-template-files)
+- [1.3 🎨 Stylesheet — style.css](#-13-stylesheet--stylecss)
+- [1.4 🧱 Frameworks & Libraries](#-14-frameworks--libraries)
+  - [1.4.1 Bootstrap 4.0.0](#-141-bootstrap-400)
+  - [1.4.2 Font Awesome 5.3.1](#-142-font-awesome-531-free)
+- [1.5 🔤 Fonts](#-15-fonts)
+- [1.6 🖼️ Images & Assets](#%EF%B8%8F-16-images--assets)
+- [1.7 ⚙️ Custom PHP Functions](#%EF%B8%8F-17-custom-php-functions-indexphp)
+- [1.8 📊 Sidebar Widgets](#-18-sidebar-widgets)
+- [1.9 🚀 Deployment](#-19-deployment)
+- [1.10 🛠️ Development Setup](#%EF%B8%8F-110-development-setup)
+
+### Part 2 — Suggestions, Bugs & Fixes
+- [2.1 🐛 Bugs](#-21-bugs)
+- [2.2 🔧 Suggested Fixes](#-22-suggested-fixes)
+- [2.3 💡 Enhancements](#-23-enhancements)
+- [2.4 ✅ Quick-Start Checklist](#-24-quick-start-checklist)
+
+### Meta
+- [📜 License](#-license)
+- [👤 Author](#-author)
+
+---
+
+# Part 1 — Technical Documentation
+
+## 📁 1.1 Directory Structure
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 ```
 litchpress/
@@ -62,7 +92,9 @@ litchpress/
 
 ---
 
-### 1.2 Core Template Files
+## 📄 1.2 Core Template Files
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 | File                          | Purpose                                                                                                                                       |
 |-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -79,13 +111,15 @@ litchpress/
 
 ---
 
-### 1.3 Stylesheet — `style.css`
+## 🎨 1.3 Stylesheet — `style.css`
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 The stylesheet serves two roles:
 1. **WordPress theme header** (required metadata block).
 2. **Custom styles** layered on top of Bootstrap.
 
-#### Key Style Declarations
+### Key Style Declarations
 
 | Selector / Rule                     | Description                                                                 |
 |-------------------------------------|-----------------------------------------------------------------------------|
@@ -102,9 +136,11 @@ The stylesheet serves two roles:
 
 ---
 
-### 1.4 Frameworks & Libraries
+## 🧱 1.4 Frameworks & Libraries
 
-#### 1.4.1 Bootstrap 4.0.0
+[⬆️ Back to Contents](#-table-of-contents)
+
+### 🅱️ 1.4.1 Bootstrap 4.0.0
 
 - **Location:** `css/` and `js/`
 - **Files included:**
@@ -116,7 +152,7 @@ The stylesheet serves two roles:
 - **Loading:** `header.php` links `bootstrap.css` via `get_stylesheet_directory_uri()`.
 - **JS loading:** Currently **commented out** in `header.php` — Bootstrap JS is **not loaded**, so no dropdowns, modals, or collapse.
 
-##### Bootstrap Grid Usage
+#### Bootstrap Grid Usage
 
 Templates use Bootstrap 4's 12-column grid system:
 
@@ -128,17 +164,19 @@ Templates use Bootstrap 4's 12-column grid system:
 | page-cooking.php | 4 (3-col)            | 4                   | 6 / 12                          |
 | sidebar.php      | 2                    | 2                   | 4 / 12                          |
 
-> **Note:** `col-xs-*` is Bootstrap 3 syntax; Bootstrap 4 uses `col-*` (extra-small is the default). Classes like `col-xs-12` are **ignored** in Bootstrap 4.
+> ⚠️ **Note:** `col-xs-*` is Bootstrap 3 syntax; Bootstrap 4 uses `col-*` (extra-small is the default). Classes like `col-xs-12` are **ignored** in Bootstrap 4.
 
-#### 1.4.2 Font Awesome 5.3.1 (Free)
+### 🎭 1.4.2 Font Awesome 5.3.1 (Free)
 
 - **Location:** `fontawesome/`
 - **Contents:** CSS (`all.css`, `brands.css`, etc.), webfonts, SCSS/LESS source, SVG sprites.
-- **Usage:** **Not loaded anywhere in templates** — available but inactive.
+- **Usage:** ⚠️ **Not loaded anywhere in templates** — available but inactive.
 
 ---
 
-### 1.5 Fonts
+## 🔤 1.5 Fonts
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 | Font      | Source                           | Formats Available                             |
 |-----------|----------------------------------|-----------------------------------------------|
@@ -146,11 +184,13 @@ Templates use Bootstrap 4's 12-column grid system:
 
 - The theme imports Play from Google Fonts **and** ships local copies in `fonts/`.
 - The local `@font-face` declaration is commented out, so only the Google Fonts import is active.
-- Fallback stack: `'Play', Fallback, sans-serif` — `Fallback` is not a valid font name (typo/placeholder).
+- Fallback stack: `'Play', Fallback, sans-serif` — ⚠️ `Fallback` is not a valid font name (typo/placeholder).
 
 ---
 
-### 1.6 Images & Assets
+## 🖼️ 1.6 Images & Assets
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 | Asset                | Location / URL                                                                 | Purpose                              |
 |----------------------|--------------------------------------------------------------------------------|--------------------------------------|
@@ -160,13 +200,15 @@ Templates use Bootstrap 4's 12-column grid system:
 | **Favicon**          | `http://mikelindner.com.au/wp-content/uploads/2025/04/me_pop-art-25.png`       | Browser tab icon                     |
 | **Apple touch icon** | Same as favicon                                                                | iOS home-screen icon                 |
 
-All image URLs are **hardcoded absolute URLs** to the production server.
+⚠️ All image URLs are **hardcoded absolute URLs** to the production server.
 
 ---
 
-### 1.7 Custom PHP Functions (`index.php`)
+## ⚙️ 1.7 Custom PHP Functions (`index.php`)
 
-#### `get_first_image_from_post($post_content)`
+[⬆️ Back to Contents](#-table-of-contents)
+
+### `get_first_image_from_post($post_content)`
 
 Extracts the first `<img src="…">` URL from post HTML using regex:
 
@@ -176,7 +218,7 @@ $pattern = '/<img.*?src=["\'](.*?)["\']/i';
 
 Returns the URL string or `false` if no image found.
 
-#### `custom_truncate_content($content, $limit)`
+### `custom_truncate_content($content, $limit)`
 
 1. Strips all HTML except `<a>` and `<video>`.
 2. Truncates to `$limit` characters.
@@ -186,7 +228,9 @@ Returns the URL string or `false` if no image found.
 
 ---
 
-### 1.8 Sidebar Widgets
+## 📊 1.8 Sidebar Widgets
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 `sidebar.php` is **not widget-ready** (no `dynamic_sidebar()` call). It outputs:
 
@@ -196,7 +240,9 @@ Returns the URL string or `false` if no image found.
 
 ---
 
-### 1.9 Deployment
+## 🚀 1.9 Deployment
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 The `deploy` script uses `rsync` to sync the theme to a remote server:
 
@@ -204,41 +250,53 @@ The `deploy` script uses `rsync` to sync the theme to a remote server:
 rsync -ruv --delete ~/source/litchpress/* kzs9j6@dominus:/var/www/html/wp-content/themes/litchpress
 ```
 
-- `-r` recursive, `-u` update (skip newer), `-v` verbose
-- `--delete` removes files on destination not in source
+| Flag       | Purpose                              |
+|------------|--------------------------------------|
+| `-r`       | Recursive                            |
+| `-u`       | Update (skip files newer on dest)    |
+| `-v`       | Verbose output                       |
+| `--delete` | Remove files on dest not in source   |
 
 ---
 
-### 1.10 Development Setup
+## 🛠️ 1.10 Development Setup
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 - **Composer:** `composer.json` requires `php-stubs/wordpress-stubs` (dev) for IDE autocompletion of WP functions.
 - **VS Code:** `.vscode/settings.json` configures Intelephense to include stubs and sets `php.executablePath`.
 
 ---
 
-## Part 2 — Suggestions, Bugs & Fixes
+# Part 2 — Suggestions, Bugs & Fixes
 
-### 2.1 Bugs
+## 🐛 2.1 Bugs
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 | # | File                            | Issue                                                                                                       | Severity |
 |---|---------------------------------|-------------------------------------------------------------------------------------------------------------|----------|
-| 1 | `style.css`                     | `.page-template-template-page-full-width` rule has truncated `clear: b` — should be `clear: both;`.          | High     |
-| 2 | `template-page-full-width.php`  | Calls `get_template_part('loop', 'page')` but `loop-page.php` **does not exist** — outputs nothing.          | High     |
-| 3 | `sidebar.php`                   | Uses deprecated `wp_list_cats()` — replaced by `wp_list_categories()` since WP 2.1.                          | Medium   |
-| 4 | `page-cooking.php`              | Contains debug string `"yeah yeah yeah"` in output.                                                          | Low      |
-| 5 | `header.php`                    | Bootstrap JS `<script>` tag is commented out — interactive components (dropdowns, collapse) won't work.       | Medium   |
-| 6 | `style.css`                     | Font fallback `'Play', Fallback, sans-serif` — `Fallback` is not a real font; should be a generic family.     | Low      |
-| 7 | All templates                   | Uses Bootstrap 3 class `col-xs-*` which is **ignored** in Bootstrap 4 (use `col-*` instead).                  | Medium   |
-| 8 | `header.php`                    | Missing `wp_head()` call — theme/plugin styles and scripts won't load properly.                              | High     |
-| 9 | `header.php`                    | Hardcoded absolute URLs for CSS, images, favicon — breaks local/dev environments.                            | Medium   |
-| 10| `style.css`                     | Local `@font-face` for Play has empty `src` (commented out) — no fallback if Google Fonts blocked.           | Low      |
+| 1 | `style.css`                     | `.page-template-template-page-full-width` rule has truncated `clear: b` — should be `clear: both;`.          | 🔴 High  |
+| 2 | `template-page-full-width.php`  | Calls `get_template_part('loop', 'page')` but `loop-page.php` **does not exist** — outputs nothing.          | 🔴 High  |
+| 3 | `sidebar.php`                   | Uses deprecated `wp_list_cats()` — replaced by `wp_list_categories()` since WP 2.1.                          | 🟡 Medium |
+| 4 | `page-cooking.php`              | Contains debug string `"yeah yeah yeah"` in output.                                                          | 🟢 Low   |
+| 5 | `header.php`                    | Bootstrap JS `<script>` tag is commented out — interactive components (dropdowns, collapse) won't work.       | 🟡 Medium |
+| 6 | `style.css`                     | Font fallback `'Play', Fallback, sans-serif` — `Fallback` is not a real font; should be a generic family.     | 🟢 Low   |
+| 7 | All templates                   | Uses Bootstrap 3 class `col-xs-*` which is **ignored** in Bootstrap 4 (use `col-*` instead).                  | 🟡 Medium |
+| 8 | `header.php`                    | Missing `wp_head()` call — theme/plugin styles and scripts won't load properly.                              | 🔴 High  |
+| 9 | `header.php`                    | Hardcoded absolute URLs for CSS, images, favicon — breaks local/dev environments.                            | 🟡 Medium |
+| 10| `style.css`                     | Local `@font-face` for Play has empty `src` (commented out) — no fallback if Google Fonts blocked.           | 🟢 Low   |
 
 ---
 
-### 2.2 Suggested Fixes
+## 🔧 2.2 Suggested Fixes
 
-```php
-// Bug #1 — style.css: Fix truncated CSS
+[⬆️ Back to Contents](#-table-of-contents)
+
+### 🔴 Bug #1 — Fix truncated CSS
+
+```css
+/* style.css */
 .page-template-template-page-full-width .content,
 .page-template-template-page-full-width .sidebar {
     width: 100%;
@@ -247,10 +305,12 @@ rsync -ruv --delete ~/source/litchpress/* kzs9j6@dominus:/var/www/html/wp-conten
 }
 ```
 
+### 🔴 Bug #2 — Fix missing template part
+
 ```php
-// Bug #2 — template-page-full-width.php: Replace missing template part
-// Option A: Create loop-page.php with standard page loop
-// Option B: Inline the loop:
+<!-- template-page-full-width.php: Replace missing template part -->
+<!-- Option A: Create loop-page.php with standard page loop -->
+<!-- Option B: Inline the loop: -->
 <?php get_header(); ?>
 <div id="ttr_main" class="row">
     <div id="ttr_content" class="col-12">
@@ -263,78 +323,98 @@ rsync -ruv --delete ~/source/litchpress/* kzs9j6@dominus:/var/www/html/wp-conten
 <?php get_footer(); ?>
 ```
 
+### 🟡 Bug #3 — Replace deprecated function
+
 ```php
-// Bug #3 — sidebar.php: Replace deprecated function
-// Before:
+<!-- sidebar.php -->
+<!-- Before: -->
 <?php wp_list_cats('sort_column=namonthly'); ?>
-// After:
+<!-- After: -->
 <?php wp_list_categories(['orderby' => 'name']); ?>
 ```
 
+### 🟢 Bug #4 — Remove debug text
+
 ```php
-// Bug #4 — page-cooking.php: Remove debug text
+<!-- page-cooking.php: Remove "yeah yeah yeah" -->
 <p><?php the_content(__('(more...)')); ?></p>
-// Remove: yeah yeah yeah
 ```
 
+### 🟡 Bug #5 — Uncomment Bootstrap JS
+
 ```html
-<!-- Bug #5 — header.php: Uncomment Bootstrap JS (before </body> ideally) -->
+<!-- header.php or footer.php (before </body>): -->
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/bootstrap.bundle.min.js'; ?>"></script>
 ```
 
+### 🔴 Bug #8 — Add wp_head()
+
 ```php
-// Bug #8 — header.php: Add wp_head() before </head>
+<!-- header.php: Add before </head> -->
 <?php wp_head(); ?>
 </head>
 ```
 
+### 🟡 Bug #9 — Use dynamic URLs
+
 ```php
-// Bug #9 — header.php: Use dynamic URLs
+<!-- header.php -->
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png">
 ```
 
 ---
 
-### 2.3 Enhancements
+## 💡 2.3 Enhancements
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 | Category            | Recommendation                                                                                                                                       |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Theme Functions** | Create `functions.php` to: enqueue scripts/styles properly, register sidebars, add theme support (menus, thumbnails, title-tag).                     |
-| **Navigation**      | Replace hardcoded header links with `wp_nav_menu()` for admin-editable menus.                                                                        |
-| **Sidebar**         | Register a widget area with `register_sidebar()` so widgets can be managed in WP admin.                                                              |
-| **Featured Images** | Use `the_post_thumbnail()` instead of regex extraction — more reliable and admin-friendly.                                                           |
-| **Excerpts**        | Use `the_excerpt()` or `wp_trim_words()` instead of custom truncation for cleaner code.                                                              |
-| **Security**        | Escape all output: `esc_html()`, `esc_url()`, `esc_attr()` — especially dynamic URLs.                                                                |
-| **Accessibility**   | Add `alt` attributes to all images, ARIA labels to navigation, skip-to-content link.                                                                 |
-| **Performance**     | Load Bootstrap and Font Awesome from CDN or enqueue minified versions; consider removing unused grid/reboot CSS.                                      |
-| **Font Awesome**    | Either load `fontawesome/css/all.min.css` in header or remove the directory to reduce theme size.                                                    |
-| **Local Fonts**     | Enable local Play font as fallback: uncomment `@font-face` src and point to `fonts/Play-Regular.ttf`.                                                |
-| **Responsive**      | Test and fix Bootstrap 4 grid classes (`col-*` instead of `col-xs-*`).                                                                               |
-| **Code Cleanup**    | Remove `index.php.noblock`, commented code, and debug strings before production.                                                                     |
-| **Child Theme**     | If extending, create a child theme to preserve customizations across updates.                                                                        |
+| 🏗️ **Theme Functions** | Create `functions.php` to: enqueue scripts/styles properly, register sidebars, add theme support (menus, thumbnails, title-tag).                     |
+| 🧭 **Navigation**      | Replace hardcoded header links with `wp_nav_menu()` for admin-editable menus.                                                                        |
+| 📊 **Sidebar**         | Register a widget area with `register_sidebar()` so widgets can be managed in WP admin.                                                              |
+| 🖼️ **Featured Images** | Use `the_post_thumbnail()` instead of regex extraction — more reliable and admin-friendly.                                                           |
+| ✂️ **Excerpts**        | Use `the_excerpt()` or `wp_trim_words()` instead of custom truncation for cleaner code.                                                              |
+| 🔒 **Security**        | Escape all output: `esc_html()`, `esc_url()`, `esc_attr()` — especially dynamic URLs.                                                                |
+| ♿ **Accessibility**   | Add `alt` attributes to all images, ARIA labels to navigation, skip-to-content link.                                                                 |
+| ⚡ **Performance**     | Load Bootstrap and Font Awesome from CDN or enqueue minified versions; consider removing unused grid/reboot CSS.                                      |
+| 🎭 **Font Awesome**    | Either load `fontawesome/css/all.min.css` in header or remove the directory to reduce theme size.                                                    |
+| 🔤 **Local Fonts**     | Enable local Play font as fallback: uncomment `@font-face` src and point to `fonts/Play-Regular.ttf`.                                                |
+| 📱 **Responsive**      | Test and fix Bootstrap 4 grid classes (`col-*` instead of `col-xs-*`).                                                                               |
+| 🧹 **Code Cleanup**    | Remove `index.php.noblock`, commented code, and debug strings before production.                                                                     |
+| 👶 **Child Theme**     | If extending, create a child theme to preserve customizations across updates.                                                                        |
 
 ---
 
-### 2.4 Quick-Start Checklist
+## ✅ 2.4 Quick-Start Checklist
 
-- [ ] Fix `clear: both;` in `style.css`
-- [ ] Create `loop-page.php` or fix `template-page-full-width.php`
-- [ ] Replace `wp_list_cats()` with `wp_list_categories()`
-- [ ] Remove debug text from `page-cooking.php`
-- [ ] Add `<?php wp_head(); ?>` before `</head>`
-- [ ] Uncomment/add Bootstrap JS before `</body>`
-- [ ] Replace hardcoded URLs with `get_stylesheet_directory_uri()`
-- [ ] Create `functions.php` for proper asset enqueuing
-- [ ] Replace `col-xs-*` with `col-*`
+[⬆️ Back to Contents](#-table-of-contents)
+
+- [ ] 🔴 Fix `clear: both;` in `style.css`
+- [ ] 🔴 Create `loop-page.php` or fix `template-page-full-width.php`
+- [ ] 🔴 Add `<?php wp_head(); ?>` before `</head>`
+- [ ] 🟡 Replace `wp_list_cats()` with `wp_list_categories()`
+- [ ] 🟡 Uncomment/add Bootstrap JS before `</body>`
+- [ ] 🟡 Replace hardcoded URLs with `get_stylesheet_directory_uri()`
+- [ ] 🟡 Replace `col-xs-*` with `col-*`
+- [ ] 🟢 Remove debug text from `page-cooking.php`
+- [ ] 🟢 Fix font fallback stack
+- [ ] 💡 Create `functions.php` for proper asset enqueuing
 
 ---
 
-## License
+## 📜 License
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 Custom license: "Screw You Hippy" — consult author for usage terms.
 
-## Author
+---
+
+## 👤 Author
+
+[⬆️ Back to Contents](#-table-of-contents)
 
 **Mike Lindner**  
-[mikelindner.com.au](https://mikelindner.com.au) · [GitHub](https://github.com/MikeLindner/litchpress)
+🌐 [mikelindner.com.au](https://mikelindner.com.au) · 🐙 [GitHub](https://github.com/MikeLindner/litchpress)
