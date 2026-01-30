@@ -2,8 +2,14 @@
     "php.executablePath": "/usr/bin/php",
     "php.validate.executablePath": "/usr/bin/php",
     "intelephense.environment.includePaths": [
-        "vendor/php-stubs/wordpress-stubs"
+        "/home/michael/source/litchpress/vendor/php-stubs/wordpress-stubs"
     ],
-    "intelephense.files.maxSize": 1000000,
-    "intelephense.environment.phpVersion": "8.5.2"
+    "intelephense.files.associations": ["*.php"],
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/node_modules/**"
+    ],
+    "intelephense.files.maxSize": 5000000,
+    "intelephense.environment.phpVersion": "8.2"
 }
