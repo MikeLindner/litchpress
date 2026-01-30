@@ -23,7 +23,7 @@
 <?php wp_body_open(); ?>
 
     <div id="ttr_header" class="jumbotron">
-        <h1><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
+        <h1><a href="<?php echo esc_url(home_url('/')); ?>">mikelindner.com</a></h1>
         <i><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('description'); ?></a></i>
         <br><br>
 
