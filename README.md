@@ -274,18 +274,18 @@ rsync -ruv --delete ~/source/litchpress/* kzs9j6@dominus:/var/www/html/wp-conten
 
 [⬆️ Back to Contents](#-table-of-contents)
 
-| # | File                            | Issue                                                                                                       | Severity |
-|---|---------------------------------|-------------------------------------------------------------------------------------------------------------|----------|
-| 1 | `style.css`                     | `.page-template-template-page-full-width` rule has truncated `clear: b` — should be `clear: both;`.          | 🔴 High  |
-| 2 | `template-page-full-width.php`  | Calls `get_template_part('loop', 'page')` but `loop-page.php` **does not exist** — outputs nothing.          | 🔴 High  |
-| 3 | `sidebar.php`                   | Uses deprecated `wp_list_cats()` — replaced by `wp_list_categories()` since WP 2.1.                          | 🟡 Medium |
-| 4 | `page-cooking.php`              | Contains debug string `"yeah yeah yeah"` in output.                                                          | 🟢 Low   |
-| 5 | `header.php`                    | Bootstrap JS `<script>` tag is commented out — interactive components (dropdowns, collapse) won't work.       | 🟡 Medium |
-| 6 | `style.css`                     | Font fallback `'Play', Fallback, sans-serif` — `Fallback` is not a real font; should be a generic family.     | 🟢 Low   |
-| 7 | All templates                   | Uses Bootstrap 3 class `col-xs-*` which is **ignored** in Bootstrap 4 (use `col-*` instead).                  | 🟡 Medium |
-| 8 | `header.php`                    | Missing `wp_head()` call — theme/plugin styles and scripts won't load properly.                              | 🔴 High  |
-| 9 | `header.php`                    | Hardcoded absolute URLs for CSS, images, favicon — breaks local/dev environments.                            | 🟡 Medium |
-| 10| `style.css`                     | Local `@font-face` for Play has empty `src` (commented out) — no fallback if Google Fonts blocked.           | 🟢 Low   |
+| # | File                            | Issue                                                                                                       | Severity | Status |
+|---|---------------------------------|-------------------------------------------------------------------------------------------------------------|----------|--------|
+| 1 | `style.css`                     | `.page-template-template-page-full-width` rule has truncated `clear: b` — should be `clear: both;`.          | 🔴 High  | ✅ Fixed |
+| 2 | `template-page-full-width.php`  | Calls `get_template_part('loop', 'page')` but `loop-page.php` **does not exist** — outputs nothing.          | 🔴 High  | ❌ Open |
+| 3 | `sidebar.php`                   | Uses deprecated `wp_list_cats()` — replaced by `wp_list_categories()` since WP 2.1.                          | 🟡 Medium | ❌ Open |
+| 4 | `page-cooking.php`              | Contains debug string `"yeah yeah yeah"` in output.                                                          | 🟢 Low   | ❌ Open |
+| 5 | `header.php`                    | Bootstrap JS `<script>` tag is commented out — interactive components (dropdowns, collapse) won't work.       | 🟡 Medium | ✅ Fixed (using wp_head) |
+| 6 | `style.css`                     | Font fallback `'Play', Fallback, sans-serif` — `Fallback` is not a real font; should be a generic family.     | 🟢 Low   | ✅ Fixed |
+| 7 | All templates                   | Uses Bootstrap 3 class `col-xs-*` which is **ignored** in Bootstrap 4 (use `col-*` instead).                  | 🟡 Medium | ❌ Open |
+| 8 | `header.php`                    | Missing `wp_head()` call — theme/plugin styles and scripts won't load properly.                              | 🔴 High  | ✅ Fixed |
+| 9 | `header.php`                    | Hardcoded absolute URLs for CSS, images, favicon — breaks local/dev environments.                            | 🟡 Medium | ✅ Fixed |
+| 10| `style.css`                     | Local `@font-face` for Play has empty `src` (commented out) — no fallback if Google Fonts blocked.           | 🟢 Low   | ✅ Fixed |
 
 ---
 
