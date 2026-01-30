@@ -278,7 +278,7 @@ rsync -ruv --delete ~/source/litchpress/* kzs9j6@dominus:/var/www/html/wp-conten
 |---|---------------------------------|-------------------------------------------------------------------------------------------------------------|----------|--------|
 | 1 | `style.css`                     | `.page-template-template-page-full-width` rule has truncated `clear: b` — should be `clear: both;`.          | 🔴 High  | ✅ Fixed |
 | 2 | `template-page-full-width.php`  | Calls `get_template_part('loop', 'page')` but `loop-page.php` **does not exist** — outputs nothing.          | 🔴 High  | ❌ Open |
-| 3 | `sidebar.php`                   | Uses deprecated `wp_list_cats()` — replaced by `wp_list_categories()` since WP 2.1.                          | 🟡 Medium | ❌ Open |
+| 3 | `sidebar.php`                   | Uses deprecated `wp_list_cats()` — replaced by `wp_list_categories()` since WP 2.1.                          | 🟡 Medium | ✅ Fixed |
 | 4 | `page-cooking.php`              | Contains debug string `"yeah yeah yeah"` in output.                                                          | 🟢 Low   | ❌ Open |
 | 5 | `header.php`                    | Bootstrap JS `<script>` tag is commented out — interactive components (dropdowns, collapse) won't work.       | 🟡 Medium | ✅ Fixed (using wp_head) |
 | 6 | `style.css`                     | Font fallback `'Play', Fallback, sans-serif` — `Fallback` is not a real font; should be a generic family.     | 🟢 Low   | ✅ Fixed |
