@@ -139,3 +139,12 @@ img {
     color: white;
     text-decoration: underline;
 }
+
+/* Column content width - centered at 80% */
+#ttr_content .col-lg-6,
+#ttr_content .col-md-6,
+#ttr_content .col-sm-6,
+#ttr_content .col-lg-4,
+#ttr_content .col-md-4 {
+    padding: 0 10%;
+}
