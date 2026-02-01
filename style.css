@@ -53,6 +53,11 @@ a {
     border-left: 1px solid red;
 }
 
+#ttr_sidebar iframe {
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
 #ttr_footer {
     width: 100%;
     border-top: 1px red solid;
