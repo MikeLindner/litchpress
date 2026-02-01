@@ -64,6 +64,20 @@ a {
     max-width: none;
 }
 
+.book-widget {
+    position: relative;
+}
+
+.book-widget a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+}
+
 #ttr_footer {
     width: 100%;
     border-top: 1px red solid;

@@ -4,6 +4,9 @@
     <h2 ><?php _e('Archives'); ?></h2>
     <ul > <?php wp_get_archives(); ?> </ul>
 
-    <iframe width='280' height='400' src='https://leanpub.com/CloudBook/embed' frameborder='0' allowtransparency='true'></iframe>
+    <div class="book-widget">
+        <a href="https://leanpub.com/CloudBook" target="_blank" rel="noopener"></a>
+        <iframe width='280' height='400' src='https://leanpub.com/CloudBook/embed' frameborder='0' allowtransparency='true'></iframe>
+    </div>
   
 </div>
