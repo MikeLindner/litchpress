@@ -1,0 +1,171 @@
+mikelindner.com.au - Category Suggestions
+==========================================
+Generated: 30 January 2026
+
+SUGGESTED CATEGORIES
+====================
+
+Linux & Unix
+------------
+- Shell Fun
+- Shell Fun II – The Geekening
+- Stop the Screenshot Sound in Gnome
+- Screen Rotation for XFCE
+- "Night Mode" for Ubuntu
+- Facetime HD Camera with Ubuntu 19.04
+- Garuda Linux Wallpaper
+- Disable middle click on Synaptics touchpads
+- Short Version of Macbook Camera on Ubuntu
+
+Apple & Vintage Computing
+-------------------------
+- My Apples
+- Apple IIc in Film
+- Free Space Error – MacOS
+
+Cloud & DevOps
+--------------
+- Terraform Website in a Box (of code)
+- My TinyURL
+- OpenStack Concept Diagram
+
+Hardware & Projects
+-------------------
+- iRack
+- Arcade Restoration
+- Lian Li 777
+- Process Control Box
+
+Telecommunications
+------------------
+- Disable Missed Call Spam on Telstra Prepaid
+- Inside a Telstra WiFi Hotspot
+- Telstra During Lockdown
+- First Student WiFi, Adelaide University
+
+Computing History
+-----------------
+- IBM Z
+- Why can't computers use registers as RAM?
+- All The Laws
+
+Tips & Tricks
+-------------
+- Great Cheat Sheet add-on for any UNIX System!
+
+Opinion
+-------
+- One for the AI Phobic
+
+Random
+------
+- Big Wine Box
+- Home Office, Eastwood
+
+
+AUTOMATION OPTIONS
+==================
+
+1. WP-CLI (Command Line)
+------------------------
+# Create categories first
+wp term create category "Linux"
+wp term create category "Apple"
+wp term create category "Cloud"
+wp term create category "Hardware"
+wp term create category "Telecommunications"
+wp term create category "Computing History"
+wp term create category "Tips"
+wp term create category "Opinion"
+wp term create category "Random"
+
+# Assign category to a post by ID
+wp post term set <post_id> category "Linux"
+
+# List all posts with IDs
+wp post list --post_type=post --fields=ID,post_title
+
+
+2. SQL Direct Update (fastest for bulk)
+---------------------------------------
+-- First, get the term_taxonomy_id for each category:
+SELECT t.term_id, t.name, tt.term_taxonomy_id 
+FROM wp_terms t 
+JOIN wp_term_taxonomy tt ON t.term_id = tt.term_id 
+WHERE tt.taxonomy = 'category';
+
+-- Then assign posts to categories:
+-- Example: Assign all posts with "Linux" or "Ubuntu" in title to Linux category
+INSERT IGNORE INTO wp_term_relationships (object_id, term_taxonomy_id)
+SELECT ID, <linux_term_taxonomy_id> 
+FROM wp_posts 
+WHERE post_type = 'post' 
+AND post_status = 'publish'
+AND (post_title LIKE '%Linux%' OR post_title LIKE '%Ubuntu%' OR post_title LIKE '%Gnome%' OR post_title LIKE '%XFCE%');
+
+
+3. Bulk WP-CLI Script
+---------------------
+#!/bin/bash
+# Save as assign-categories.sh
+
+# Linux posts
+wp post term set $(wp post list --post_type=post --s="Linux" --format=ids) category "Linux"
+wp post term set $(wp post list --post_type=post --s="Ubuntu" --format=ids) category "Linux"
+wp post term set $(wp post list --post_type=post --s="Gnome" --format=ids) category "Linux"
+wp post term set $(wp post list --post_type=post --s="Shell" --format=ids) category "Linux"
+
+# Apple posts
+wp post term set $(wp post list --post_type=post --s="Apple" --format=ids) category "Apple"
+wp post term set $(wp post list --post_type=post --s="MacOS" --format=ids) category "Apple"
+
+# Cloud posts  
+wp post term set $(wp post list --post_type=post --s="Terraform" --format=ids) category "Cloud"
+wp post term set $(wp post list --post_type=post --s="OpenStack" --format=ids) category "Cloud"
+
+# Telco posts
+wp post term set $(wp post list --post_type=post --s="Telstra" --format=ids) category "Telecommunications"
+wp post term set $(wp post list --post_type=post --s="WiFi" --format=ids) category "Telecommunications"
+
+
+4. WordPress Plugin Options
+---------------------------
+- Auto Post Taxonomy - auto-assigns based on keywords
+- Jeanie AI - uses AI to suggest/assign categories
+- Flavor - content classification plugin
+
+
+MANUAL MAPPING (Post Title -> Category)
+=======================================
+Post Title                                          | Category
+----------------------------------------------------|--------------------
+Disable Missed Call Spam on Telstra Prepaid         | Telecommunications
+Big Wine Box                                        | Random
+Garuda Linux Wallpaper                              | Linux
+Process Control Box                                 | Hardware
+One for the AI Phobic                               | Opinion
+My Apples                                           | Apple
+Apple IIc in Film                                   | Apple
+Stop the Screenshot Sound in Gnome                  | Linux
+All The Laws                                        | Computing History
+My TinyURL                                          | Cloud
+Inside a Telstra WiFi Hotspot                       | Telecommunications
+Screen Rotation for XFCE                            | Linux
+Why can't computers use registers as RAM?           | Computing History
+Terraform Website in a Box                          | Cloud
+Disable middle click on Synaptics touchpads         | Linux
+Telstra During Lockdown                             | Telecommunications
+Shell Fun                                           | Linux
+Shell Fun II – The Geekening                        | Linux
+Short Version of Macbook Camera on Ubuntu           | Linux
+"Night Mode" for Ubuntu                             | Linux
+Facetime HD Camera with Ubuntu 19.04                | Linux
+Free Space Error – MacOS                            | Apple
+IBM Z                                               | Computing History
+Great Cheat Sheet add-on for any UNIX System!       | Tips
+Home Office, Eastwood                               | Random
+iRack                                               | Hardware
+OpenStack Concept Diagram                           | Cloud
+Arcade Restoration                                  | Hardware
+Lian Li 777                                         | Hardware
+First Student WiFi, Adelaide University             | Telecommunications
