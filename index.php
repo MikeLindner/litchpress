@@ -40,7 +40,7 @@ function custom_truncate_content($content, $limit)
     }
 </style>
 <div id="ttr_main" class="row">
-    <div id="ttr_content" class="col-lg-10 col-sm-8 col-md-10 col-12">
+    <div id="ttr_content" class="col-lg-9 col-sm-8 col-md-9 col-12">
         <div class="row">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
