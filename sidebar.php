@@ -30,7 +30,7 @@
                 <?php if ($product) : ?>
                     <span class="price"><?php echo $product->get_price_html(); ?></span>
                 <?php endif; ?>
-                <span class="shop-now">Shop Now →</span>
+                <span class="shop-now">Buy Now →</span>
             </div>
         </a>
     </div>

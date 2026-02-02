@@ -216,3 +216,16 @@ img {
 #ttr_content .col-md-4 {
     padding: 0 10%;
 }
+
+/* Afterpay messaging - fix overlap */
+.afterpay-paragraph,
+.afterpay-message,
+[data-afterpay-placement],
+.wc-block-components-product-price + p,
+.price + afterpay-placement,
+afterpay-placement {
+    display: block;
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
