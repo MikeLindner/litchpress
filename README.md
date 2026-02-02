@@ -26,8 +26,9 @@ A custom, minimalist WordPress theme by **Mike Lindner** for [mikelindner.com.au
 - [1.6 🖼️ Images & Assets](#%EF%B8%8F-16-images--assets)
 - [1.7 ⚙️ Custom PHP Functions](#%EF%B8%8F-17-custom-php-functions-indexphp)
 - [1.8 📊 Sidebar Widgets](#-18-sidebar-widgets)
-- [1.9 🚀 Deployment](#-19-deployment)
-- [1.10 🛠️ Development Setup](#%EF%B8%8F-110-development-setup)
+- [1.9 � WooCommerce Integration](#-19-woocommerce-integration)
+- [1.10 🚀 Deployment](#-110-deployment)
+- [1.11 🛠️ Development Setup](#%EF%B8%8F-111-development-setup)
 
 ### Part 2 — Suggestions, Bugs & Fixes
 - [2.1 🐛 Bugs](#-21-bugs)
@@ -57,7 +58,8 @@ litchpress/
 ├── page.php                  # Generic page template (title commented out)
 ├── page-nodate.php           # Page template without date display
 ├── page-cooking.php          # Custom page template for "cooking" category (4-col grid)
-├── sidebar.php               # Sidebar with categories, archives, Leanpub embed
+├── sidebar.php               # Sidebar with categories, archives, WooCommerce product widget
+├── woocommerce.php           # Full-width WooCommerce template (shop, product, cart, checkout)
 ├── template-page-full-width.php  # Full-width page template (no sidebar)
 │
 ├── style.css                 # Main theme stylesheet + WP theme header
@@ -106,7 +108,8 @@ litchpress/
 | **page.php**                  | Generic page template. Title output is commented out; shows full-width content (`col-lg-12`). Date display commented out.                     |
 | **page-nodate.php**           | Variant of `page.php` with title commented out and no date — clean content-only layout.                                                       |
 | **page-cooking.php**          | 4-column grid layout (`col-lg-4`) intended for recipe/category pages. Contains debug text `"yeah yeah yeah"` (to be removed).                 |
-| **sidebar.php**               | Lists categories (`wp_list_cats`) and archives (`wp_get_archives`). Embeds Leanpub book widget via `<iframe>`.                                |
+| **sidebar.php**               | Lists categories and archives. Displays random WooCommerce product with "Buy Now" button. Features camo gradient extending to browser edge.   |
+| **woocommerce.php**           | Full-width template for all WooCommerce pages (shop, product, cart, checkout). No sidebar for cleaner product display.                         |
 | **template-page-full-width.php** | Registered page template ("Full width page"). Calls `get_template_part('loop', 'page')` — **note: `loop-page.php` does not exist** (bug).    |
 
 ---
@@ -234,13 +237,57 @@ Returns the URL string or `false` if no image found.
 
 `sidebar.php` is **not widget-ready** (no `dynamic_sidebar()` call). It outputs:
 
-1. **Categories** via deprecated `wp_list_cats()` (should be `wp_list_categories()`).
+1. **Categories** via `wp_list_categories()`.
 2. **Archives** via `wp_get_archives()`.
-3. **Leanpub embed** — hardcoded iframe for "CloudBook".
+3. **WooCommerce Random Product Widget** — displays a random product from the store with:
+   - Product thumbnail image
+   - Product title as clickable link
+   - "Buy Now" button linking to product page
+   - Camo gradient background extending to browser edge
 
 ---
 
-## 🚀 1.9 Deployment
+## 🛒 1.9 WooCommerce Integration
+
+[⬆️ Back to Contents](#-table-of-contents)
+
+The theme includes full WooCommerce support:
+
+### Theme Support (`functions.php`)
+
+```php
+add_theme_support('woocommerce');
+add_theme_support('wc-product-gallery-zoom');
+add_theme_support('wc-product-gallery-lightbox');
+add_theme_support('wc-product-gallery-slider');
+```
+
+### Template Override (`woocommerce.php`)
+
+A custom `woocommerce.php` template provides full-width layout for all WooCommerce pages:
+- Shop/archive pages
+- Single product pages
+- Cart and checkout
+- No sidebar for cleaner product display
+
+### Product Page Styling (`style.css`)
+
+Comprehensive CSS for WooCommerce product pages:
+
+| Element | Styling |
+|---------|----------|
+| **Product Image** | Max-width 300px, floated left — optimized for book covers |
+| **Short Description** | Proper spacing below title |
+| **Price** | Large greenyellow text (1.8em) |
+| **Add to Cart** | Greenyellow background with dark text |
+| **Afterpay** | Proper spacing to prevent overlap |
+| **Tabs** | Dark theme with greenyellow accents |
+| **Stock Status** | Color-coded (green in stock, red out of stock) |
+| **Related Products** | Dark card styling with hover effects |
+
+---
+
+## 🚀 1.10 Deployment
 
 [⬆️ Back to Contents](#-table-of-contents)
 
@@ -259,7 +306,7 @@ rsync -ruv --delete ~/source/litchpress/* kzs9j6@dominus:/var/www/html/wp-conten
 
 ---
 
-## 🛠️ 1.10 Development Setup
+## 🛠️ 1.11 Development Setup
 
 [⬆️ Back to Contents](#-table-of-contents)
 
