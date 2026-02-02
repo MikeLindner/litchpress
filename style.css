@@ -500,3 +500,15 @@ afterpay-placement {
     background: rgba(255, 68, 68, 0.1);
     border: 1px solid #ff4444;
 }
+
+/* Product image - smaller for books */
+.woocommerce div.product div.images {
+    max-width: 300px;
+    float: left;
+    margin-right: 2em;
+}
+
+.woocommerce div.product div.images img {
+    max-width: 100%;
+    height: auto;
+}
